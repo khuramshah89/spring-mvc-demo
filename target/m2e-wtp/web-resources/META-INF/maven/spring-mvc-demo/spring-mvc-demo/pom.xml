@@ -6,8 +6,14 @@
   <packaging>war</packaging>
   <name>spring-mvc-maven</name>
   <description>this project firstly created as dynamic web app then maven was added in it.</description>
-   <dependencies>
   
+  <!-- properties>
+  <springframework.version>4.3.9.RELEASE</springframework.version>
+  <springsecurity.version>4.2.3.RELEASE</springsecurity.version>
+  </properties> -->
+  
+   <dependencies>
+   
   <dependency>
   <groupId>org.springframework</groupId>
   <artifactId>spring-webmvc</artifactId>
@@ -22,6 +28,17 @@
   <groupId>javax.servlet</groupId>
   <artifactId>javax.servlet-api</artifactId>
   </dependency>
+  
+  <dependency>
+  <groupId>javax.servlet.jsp</groupId>
+  <artifactId>javax.servlet.jsp-api</artifactId>
+  </dependency>
+  
+  <dependency>
+ <groupId>javax.servlet.jsp.jstl</groupId>
+    <artifactId>jstl-api</artifactId>
+  </dependency>
+  
   </dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -46,28 +63,30 @@
   </build>
   <dependencyManagement>
   	<dependencies>
-  	<!-- Add Spring MVC and REST support -->
   		<dependency>
   			<groupId>org.springframework</groupId>
   			<artifactId>spring-webmvc</artifactId>
   			<version>5.0.5.RELEASE</version>
   		</dependency>
-  		
-  		<!--  Add Jackson for JSON support
-  		Spring sutomatically convert pojo to json and json to pojo
-  		for this conversion spring need jackson -->
   		<dependency>
   			<groupId>com.fasterxml.jackson.core</groupId>
   			<artifactId>jackson-databind</artifactId>
   			<version>2.9.5</version>
   		</dependency>
-  		
-  		<!--  Add servlet support for spring's
-  		AbstractAnnotationConfigDispatcherServletInitializer -->
   		<dependency>
   			<groupId>javax.servlet</groupId>
   			<artifactId>javax.servlet-api</artifactId>
   			<version>3.0.1</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>javax.servlet.jsp</groupId>
+  			<artifactId>javax.servlet.jsp-api</artifactId>
+  			<version>2.3.1</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>javax.servlet.jsp.jstl</groupId>
+  			<artifactId>jstl-api</artifactId>
+  			<version>1.2</version>
   		</dependency>
   	</dependencies>
   </dependencyManagement>

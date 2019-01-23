@@ -13,12 +13,14 @@ import org.springframework.web.servlet.view.JstlView;
  * @author Khuram Shah
  *
  */
-@Configuration
-@EnableWebMvc
-@ComponentScan({"com.srpingdemo.mvc","com.luv2.code.restAPI"})
+@Configuration //replace web.xml
+@EnableWebMvc //replace spring-mvc-demo-servlet.xml 
+//@ComponentScan(basePackages = "com")
+@ComponentScan({"com.srpingdemo.mvc","com.luv2.code"})
 public class DemoAppConfig {
  
 	//Define Spring MVC view resolver for ref spring-mvc-demo-servlet.xml
+	//below code was for Spring web mvc
 	@Bean
 	public ViewResolver internalResourceViewResolver() {
 	    InternalResourceViewResolver bean = new InternalResourceViewResolver();
@@ -27,4 +29,13 @@ public class DemoAppConfig {
 	    bean.setSuffix(".jsp");
 	    return bean;
 	}
+
+//	//Define Spring view resolver
+//	@Bean
+//	public ViewResolver viewResolver(){
+//	InternalResourceViewResolver bean = new InternalResourceViewResolver();
+//	bean.setPrefix("/WEB-INF/view/");
+//	bean.setSuffix(".jsp");
+//	return bean;
+//	}
 }

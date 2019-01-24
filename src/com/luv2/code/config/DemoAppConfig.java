@@ -20,7 +20,7 @@ import org.springframework.web.servlet.view.JstlView;
 public class DemoAppConfig {
  
 	//Define Spring MVC view resolver for ref spring-mvc-demo-servlet.xml
-	//below code was for Spring web mvc
+	//below code was for Spring web mvc.
 	@Bean
 	public ViewResolver internalResourceViewResolver() {
 	    InternalResourceViewResolver bean = new InternalResourceViewResolver();

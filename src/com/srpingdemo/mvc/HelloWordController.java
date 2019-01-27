@@ -39,4 +39,9 @@ public class HelloWordController {
 		
 		return "helloWorld";
 	}
+
+	@RequestMapping("/crop")
+	public String uploadImage(){
+		return "crop";
+	}
 }
